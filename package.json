@@ -1,0 +1,21 @@
+{
+  "name": "mro-ms7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "import": "node src/import.js",
+    "build": "node src/generate.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "mysql2": "^3.22.5"
+  }
+}

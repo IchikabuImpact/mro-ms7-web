@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>料理集ダッシュボード | MRO-MS7</title>
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+.hero{background:linear-gradient(135deg,#c0392b 0%,#96281b 100%);color:#fff;padding:32px 24px;text-align:center;margin-bottom:0}
+.hero h1{font-size:28px;font-weight:700;margin-bottom:8px}
+.hero p{font-size:14px;opacity:.85}
+</style>
+</head>
+<body>
+<header><div class="header-inner">
+<span class="header-logo">🍽️ 料理集ダッシュボード<span>MRO-MS7</span></span>
+<span class="header-sub">日立 過熱水蒸気オーブンレンジ</span>
+</div></header>
+<div class="hero">
+  <h1>🍽️ 料理集ダッシュボード</h1>
+  <p>日立 過熱水蒸気オーブンレンジ MRO-MS7 — 45種類のレシピ</p>
+</div>
+<main>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="料理名・食材で検索…">
+    <select id="catSelect">
+      <option value="">すべてのカテゴリー</option>
+      <option value="あたため">🔥 あたため</option>
+<option value="ゆで物・蒸し物">♨️ ゆで物・蒸し物</option>
+<option value="10分メニュー">⏱️ 10分メニュー</option>
+<option value="焼き物">🍳 焼き物</option>
+<option value="揚げ物（油なし）">🍤 揚げ物（油なし）</option>
+<option value="煮物">🍲 煮物</option>
+<option value="ご飯・めん類">🍜 ご飯・めん類</option>
+<option value="ピザ・グラタン">🍕 ピザ・グラタン</option>
+<option value="自家製食品">🥩 自家製食品</option>
+<option value="パン">🍞 パン</option>
+<option value="スイーツ">🍰 スイーツ</option>
+    </select>
+  </div>
+  <div class="cat-nav">
+    <button class="cat-btn active" data-cat="">すべて</button>
+    <button class="cat-btn" data-cat="あたため">🔥 あたため</button>
+<button class="cat-btn" data-cat="ゆで物・蒸し物">♨️ ゆで物・蒸し物</button>
+<button class="cat-btn" data-cat="10分メニュー">⏱️ 10分メニュー</button>
+<button class="cat-btn" data-cat="焼き物">🍳 焼き物</button>
+<button class="cat-btn" data-cat="揚げ物（油なし）">🍤 揚げ物（油なし）</button>
+<button class="cat-btn" data-cat="煮物">🍲 煮物</button>
+<button class="cat-btn" data-cat="ご飯・めん類">🍜 ご飯・めん類</button>
+<button class="cat-btn" data-cat="ピザ・グラタン">🍕 ピザ・グラタン</button>
+<button class="cat-btn" data-cat="自家製食品">🥩 自家製食品</button>
+<button class="cat-btn" data-cat="パン">🍞 パン</button>
+<button class="cat-btn" data-cat="スイーツ">🍰 スイーツ</button>
+  </div>
+  <p class="result-count" id="resultCount">45件のレシピ</p>
+  <div class="recipe-grid" id="recipeGrid">
+<a href="/recipe-1.html" class="recipe-card"
+  data-cat="あたため"
+  data-title="牛乳のあたため"
+  data-method="レンジ・飲み物デイリー 2牛乳">
+  <div class="card-thumb">🔥</div>
+  <div class="card-body">
+    <div class="card-cat">あたため</div>
+    <div class="card-title">牛乳のあたため</div>
+    
+    <div class="card-meta"><span class="tag menu">No.2 牛乳</span><span class="tag time">⏱ 1杯（200mL）約1分38秒</span></div>
+  </div>
+</a>
+<a href="/recipe-2.html" class="recipe-card"
+  data-cat="あたため"
+  data-title="お酒のあたため（酒かん）"
+  data-method="レンジ・飲み物デイリー 3酒かん">
+  <div class="card-thumb">🔥</div>
+  <div class="card-body">
+    <div class="card-cat">あたため</div>
+    <div class="card-title">お酒のあたため（酒かん）</div>
+    
+    <div class="card-meta"><span class="tag menu">No.3 酒かん</span><span class="tag time">⏱ 1本（180mL）約1分</span></div>
+  </div>
+</a>
+<a href="/recipe-3.html" class="recipe-card"
+  data-cat="あたため"
+  data-title="ごはんのスチームあたため"
+  data-method="スチーム調理 18スチームあたため">
+  <div class="card-thumb">🔥</div>
+  <div class="card-body">
+    <div class="card-cat">あたため</div>
+    <div class="card-title">ごはんのスチームあたため</div>
+    
+    <div class="card-meta"><span class="tag menu">No.18 スチームあたため</span><span class="tag time">⏱ 1杯（約150g）約2分</span></div>
+  </div>
+</a>
+<a href="/recipe-4.html" class="recipe-card"
+  data-cat="ゆで物・蒸し物"
+  data-title="ほうれん草のおひたし"
+  data-method="レンジ・飲み物デイリー 6葉・果菜">
+  <div class="card-thumb">♨️</div>
+  <div class="card-body">
+    <div class="card-cat">ゆで物・蒸し物</div>
+    <div class="card-title">ほうれん草のおひたし</div>
+    
+    <div class="card-meta"><span class="tag menu">No.6 葉・果菜</span><span class="tag time">⏱ 約2分</span></div>
+  </div>
+</a>
+<a href="/recipe-5.html" class="recipe-card"
+  data-cat="ゆで物・蒸し物"
+  data-title="イタリアンサラダ"
+  data-method="レンジ・6葉・果菜 / 7根菜">
+  <div class="card-thumb">♨️</div>
+  <div class="card-body">
+    <div class="card-cat">ゆで物・蒸し物</div>
+    <div class="card-title">イタリアンサラダ</div>
+    
+    <div class="card-meta"><span class="tag menu">No.6 葉・果菜</span><span class="tag time">⏱ さやいんげん約2分、じゃがいも約8分</span></div>
+  </div>
+</a>
+<a href="/recipe-6.html" class="recipe-card"
+  data-cat="10分メニュー"
+  data-title="焼きそば"
+  data-method="レンジ・10分メニュー 14焼きそば">
+  <div class="card-thumb">⏱️</div>
+  <div class="card-body">
+    <div class="card-cat">10分メニュー</div>
+    <div class="card-title">焼きそば</div>
+    
+    <div class="card-meta"><span class="tag menu">No.14 焼きそば</span><span class="tag time">⏱ 約6分</span></div>
+  </div>
+</a>
+<a href="/recipe-7.html" class="recipe-card"
+  data-cat="10分メニュー"
+  data-title="チンジャオロウスー"
+  data-method="レンジ・10分メニュー 14焼きそば">
+  <div class="card-thumb">⏱️</div>
+  <div class="card-body">
+    <div class="card-cat">10分メニュー</div>
+    <div class="card-title">チンジャオロウスー</div>
+    <div class="card-subtitle">牛肉とピーマンの細切りいため</div>
+    <div class="card-meta"><span class="tag menu">No.14 焼きそば</span><span class="tag time">⏱ 約6分</span></div>
+  </div>
+</a>
+<a href="/recipe-8.html" class="recipe-card"
+  data-cat="10分メニュー"
+  data-title="ゴーヤーチャンプル"
+  data-method="レンジ・10分メニュー 14焼きそば">
+  <div class="card-thumb">⏱️</div>
+  <div class="card-body">
+    <div class="card-cat">10分メニュー</div>
+    <div class="card-title">ゴーヤーチャンプル</div>
+    
+    <div class="card-meta"><span class="tag menu">No.14 焼きそば</span><span class="tag time">⏱ 約6分（下ごしらえ レンジ600W 約1</span></div>
+  </div>
+</a>
+<a href="/recipe-9.html" class="recipe-card"
+  data-cat="10分メニュー"
+  data-title="鶏の簡単蒸し"
+  data-method="レンジ・10分メニュー 15鶏の簡単蒸し">
+  <div class="card-thumb">⏱️</div>
+  <div class="card-body">
+    <div class="card-cat">10分メニュー</div>
+    <div class="card-title">鶏の簡単蒸し</div>
+    
+    <div class="card-meta"><span class="tag menu">No.15 鶏の簡単蒸し</span><span class="tag time">⏱ 約8分</span></div>
+  </div>
+</a>
+<a href="/recipe-10.html" class="recipe-card"
+  data-cat="10分メニュー"
+  data-title="鶏ハムの簡単蒸し"
+  data-method="レンジ・10分メニュー 15鶏の簡単蒸し">
+  <div class="card-thumb">⏱️</div>
+  <div class="card-body">
+    <div class="card-cat">10分メニュー</div>
+    <div class="card-title">鶏ハムの簡単蒸し</div>
+    
+    <div class="card-meta"><span class="tag menu">No.15 鶏の簡単蒸し</span><span class="tag time">⏱ 約8分</span></div>
+  </div>
+</a>
+<a href="/recipe-11.html" class="recipe-card"
+  data-cat="10分メニュー"
+  data-title="マーボーなす"
+  data-method="レンジ・10分メニュー 16マーボーなす">
+  <div class="card-thumb">⏱️</div>
+  <div class="card-body">
+    <div class="card-cat">10分メニュー</div>
+    <div class="card-title">マーボーなす</div>
+    
+    <div class="card-meta"><span class="tag menu">No.16 マーボーなす</span><span class="tag time">⏱ 約10分</span></div>
+  </div>
+</a>
+<a href="/recipe-12.html" class="recipe-card"
+  data-cat="10分メニュー"
+  data-title="肉豆腐"
+  data-method="レンジ・10分メニュー 16マーボーなす">
+  <div class="card-thumb">⏱️</div>
+  <div class="card-body">
+    <div class="card-cat">10分メニュー</div>
+    <div class="card-title">肉豆腐</div>
+    
+    <div class="card-meta"><span class="tag menu">No.16 マーボーなす</span><span class="tag time">⏱ 約10分</span></div>
+  </div>
+</a>
+<a href="/recipe-13.html" class="recipe-card"
+  data-cat="焼き物"
+  data-title="さけのホイル焼き"
+  data-method="オーブン・飲み物デイリー 10さけのホイル焼き">
+  <div class="card-thumb">🍳</div>
+  <div class="card-body">
+    <div class="card-cat">焼き物</div>
+    <div class="card-title">さけのホイル焼き</div>
+    
+    <div class="card-meta"><span class="tag menu">No.10 さけのホイル焼き</span><span class="tag time">⏱ 約25分</span></div>
+  </div>
+</a>
+<a href="/recipe-14.html" class="recipe-card"
+  data-cat="焼き物"
+  data-title="えびとほたてのホイル焼き"
+  data-method="オーブン・飲み物デイリー 10さけのホイル焼き">
+  <div class="card-thumb">🍳</div>
+  <div class="card-body">
+    <div class="card-cat">焼き物</div>
+    <div class="card-title">えびとほたてのホイル焼き</div>
+    
+    <div class="card-meta"><span class="tag menu">No.10 さけのホイル焼き</span><span class="tag time">⏱ 約25分</span></div>
+  </div>
+</a>
+<a href="/recipe-15.html" class="recipe-card"
+  data-cat="焼き物"
+  data-title="ポークグリル"
+  data-method="グリル・飲み物デイリー 11ポークグリル">
+  <div class="card-thumb">🍳</div>
+  <div class="card-body">
+    <div class="card-cat">焼き物</div>
+    <div class="card-title">ポークグリル</div>
+    
+    <div class="card-meta"><span class="tag menu">No.11 ポークグリル</span><span class="tag time">⏱ 約20分</span></div>
+  </div>
+</a>
+<a href="/recipe-16.html" class="recipe-card"
+  data-cat="焼き物"
+  data-title="焼き豚"
+  data-method="スチームオーブン・グリル 22焼き豚">
+  <div class="card-thumb">🍳</div>
+  <div class="card-body">
+    <div class="card-cat">焼き物</div>
+    <div class="card-title">焼き豚</div>
+    
+    <div class="card-meta"><span class="tag menu">No.22 焼き豚</span><span class="tag time">⏱ 約59分</span></div>
+  </div>
+</a>
+<a href="/recipe-17.html" class="recipe-card"
+  data-cat="焼き物"
+  data-title="焼きいも"
+  data-method="スチームオーブン 31焼きいも">
+  <div class="card-thumb">🍳</div>
+  <div class="card-body">
+    <div class="card-cat">焼き物</div>
+    <div class="card-title">焼きいも</div>
+    
+    <div class="card-meta"><span class="tag menu">No.31 焼きいも</span><span class="tag time">⏱ 約65分</span></div>
+  </div>
+</a>
+<a href="/recipe-18.html" class="recipe-card"
+  data-cat="焼き物"
+  data-title="ハンバーグ"
+  data-method="過熱水蒸気・グリル 33ハンバーグ（仕上がり調節弱）">
+  <div class="card-thumb">🍳</div>
+  <div class="card-body">
+    <div class="card-cat">焼き物</div>
+    <div class="card-title">ハンバーグ</div>
+    
+    <div class="card-meta"><span class="tag menu">No.33 ハンバーグ</span><span class="tag time">⏱ 仕上がり調節弱で約25分</span></div>
+  </div>
+</a>
+<a href="/recipe-19.html" class="recipe-card"
+  data-cat="焼き物"
+  data-title="ピーマンの肉詰め"
+  data-method="過熱水蒸気・グリル 33ハンバーグ">
+  <div class="card-thumb">🍳</div>
+  <div class="card-body">
+    <div class="card-cat">焼き物</div>
+    <div class="card-title">ピーマンの肉詰め</div>
+    
+    <div class="card-meta"><span class="tag menu">No.33 ハンバーグ</span><span class="tag time">⏱ 約29分（下ごしらえ レンジ600W 約</span></div>
+  </div>
+</a>
+<a href="/recipe-20.html" class="recipe-card"
+  data-cat="焼き物"
+  data-title="鶏のハーブ焼き"
+  data-method="過熱水蒸気・グリル 34鶏のハーブ焼き">
+  <div class="card-thumb">🍳</div>
+  <div class="card-body">
+    <div class="card-cat">焼き物</div>
+    <div class="card-title">鶏のハーブ焼き</div>
+    
+    <div class="card-meta"><span class="tag menu">No.34 鶏のハーブ焼き</span><span class="tag time">⏱ 約29分（下ごしらえ レンジ600W 約</span></div>
+  </div>
+</a>
+<a href="/recipe-21.html" class="recipe-card"
+  data-cat="焼き物"
+  data-title="塩ざけ"
+  data-method="過熱水蒸気・グリル 35塩ざけ（仕上がり調節弱）">
+  <div class="card-thumb">🍳</div>
+  <div class="card-body">
+    <div class="card-cat">焼き物</div>
+    <div class="card-title">塩ざけ</div>
+    
+    <div class="card-meta"><span class="tag menu">No.35 塩ざけ</span><span class="tag time">⏱ 仕上がり調節弱で約19分</span></div>
+  </div>
+</a>
+<a href="/recipe-22.html" class="recipe-card"
+  data-cat="焼き物"
+  data-title="さばのごま焼き"
+  data-method="過熱水蒸気・グリル 35塩ざけ（仕上がり調節弱）">
+  <div class="card-thumb">🍳</div>
+  <div class="card-body">
+    <div class="card-cat">焼き物</div>
+    <div class="card-title">さばのごま焼き</div>
+    
+    <div class="card-meta"><span class="tag menu">No.35 塩ざけ</span><span class="tag time">⏱ 仕上がり調節弱で約19分</span></div>
+  </div>
+</a>
+<a href="/recipe-23.html" class="recipe-card"
+  data-cat="焼き物"
+  data-title="ぶりの照り焼き"
+  data-method="過熱水蒸気・グリル 35塩ざけ（仕上がり調節弱）">
+  <div class="card-thumb">🍳</div>
+  <div class="card-body">
+    <div class="card-cat">焼き物</div>
+    <div class="card-title">ぶりの照り焼き</div>
+    
+    <div class="card-meta"><span class="tag menu">No.35 塩ざけ</span><span class="tag time">⏱ 仕上がり調節弱で約19分</span></div>
+  </div>
+</a>
+<a href="/recipe-24.html" class="recipe-card"
+  data-cat="焼き物"
+  data-title="焼き野菜"
+  data-method="過熱水蒸気・グリル 36焼き野菜">
+  <div class="card-thumb">🍳</div>
+  <div class="card-body">
+    <div class="card-cat">焼き物</div>
+    <div class="card-title">焼き野菜</div>
+    
+    <div class="card-meta"><span class="tag menu">No.36 焼き野菜</span><span class="tag time">⏱ 約23分</span></div>
+  </div>
+</a>
+<a href="/recipe-25.html" class="recipe-card"
+  data-cat="焼き物"
+  data-title="野菜の肉巻き"
+  data-method="過熱水蒸気・グリル 36焼き野菜（仕上がり調節強）">
+  <div class="card-thumb">🍳</div>
+  <div class="card-body">
+    <div class="card-cat">焼き物</div>
+    <div class="card-title">野菜の肉巻き</div>
+    
+    <div class="card-meta"><span class="tag menu">No.36 焼き野菜</span><span class="tag time">⏱ 仕上がり調節強で約26分</span></div>
+  </div>
+</a>
+<a href="/recipe-26.html" class="recipe-card"
+  data-cat="焼き物"
+  data-title="ローストビーフ"
+  data-method="オーブン（予熱なし）210℃">
+  <div class="card-thumb">🍳</div>
+  <div class="card-body">
+    <div class="card-cat">焼き物</div>
+    <div class="card-title">ローストビーフ</div>
+    
+    <div class="card-meta"><span class="tag time">⏱ 50〜60分</span></div>
+  </div>
+</a>
+<a href="/recipe-27.html" class="recipe-card"
+  data-cat="焼き物"
+  data-title="焼きとり"
+  data-method="グリル">
+  <div class="card-thumb">🍳</div>
+  <div class="card-body">
+    <div class="card-cat">焼き物</div>
+    <div class="card-title">焼きとり</div>
+    
+    <div class="card-meta"><span class="tag time">⏱ 17〜22分 裏返して6〜11分</span></div>
+  </div>
+</a>
+<a href="/recipe-28.html" class="recipe-card"
+  data-cat="焼き物"
+  data-title="鶏の照り焼き"
+  data-method="オーブン（予熱なし）200℃">
+  <div class="card-thumb">🍳</div>
+  <div class="card-body">
+    <div class="card-cat">焼き物</div>
+    <div class="card-title">鶏の照り焼き</div>
+    
+    <div class="card-meta"><span class="tag time">⏱ 23〜27分</span></div>
+  </div>
+</a>
+<a href="/recipe-29.html" class="recipe-card"
+  data-cat="揚げ物（油なし）"
+  data-title="鶏のから揚げ"
+  data-method="過熱水蒸気・グリル 37鶏のから揚げ">
+  <div class="card-thumb">🍤</div>
+  <div class="card-body">
+    <div class="card-cat">揚げ物（油なし）</div>
+    <div class="card-title">鶏のから揚げ</div>
+    <div class="card-subtitle">油なし</div>
+    <div class="card-meta"><span class="tag menu">No.37 鶏のから揚げ</span><span class="tag time">⏱ 約24分</span></div>
+  </div>
+</a>
+<a href="/recipe-30.html" class="recipe-card"
+  data-cat="揚げ物（油なし）"
+  data-title="オーブン天ぷら"
+  data-method="過熱水蒸気・グリル 38オーブン天ぷら">
+  <div class="card-thumb">🍤</div>
+  <div class="card-body">
+    <div class="card-cat">揚げ物（油なし）</div>
+    <div class="card-title">オーブン天ぷら</div>
+    <div class="card-subtitle">油なし</div>
+    <div class="card-meta"><span class="tag menu">No.38 オーブン天ぷら</span><span class="tag time">⏱ 約28分</span></div>
+  </div>
+</a>
+<a href="/recipe-31.html" class="recipe-card"
+  data-cat="揚げ物（油なし）"
+  data-title="ヒレカツ"
+  data-method="過熱水蒸気・グリル 39ヒレカツ">
+  <div class="card-thumb">🍤</div>
+  <div class="card-body">
+    <div class="card-cat">揚げ物（油なし）</div>
+    <div class="card-title">ヒレカツ</div>
+    <div class="card-subtitle">油なし</div>
+    <div class="card-meta"><span class="tag menu">No.39 ヒレカツ</span><span class="tag time">⏱ 約25分</span></div>
+  </div>
+</a>
+<a href="/recipe-32.html" class="recipe-card"
+  data-cat="揚げ物（油なし）"
+  data-title="とんカツ"
+  data-method="過熱水蒸気・グリル 40とんカツ">
+  <div class="card-thumb">🍤</div>
+  <div class="card-body">
+    <div class="card-cat">揚げ物（油なし）</div>
+    <div class="card-title">とんカツ</div>
+    <div class="card-subtitle">油なし</div>
+    <div class="card-meta"><span class="tag menu">No.40 とんカツ</span><span class="tag time">⏱ 約22分</span></div>
+  </div>
+</a>
+<a href="/recipe-33.html" class="recipe-card"
+  data-cat="揚げ物（油なし）"
+  data-title="チキンカツ"
+  data-method="過熱水蒸気・グリル 41チキンカツ">
+  <div class="card-thumb">🍤</div>
+  <div class="card-body">
+    <div class="card-cat">揚げ物（油なし）</div>
+    <div class="card-title">チキンカツ</div>
+    <div class="card-subtitle">油なし</div>
+    <div class="card-meta"><span class="tag menu">No.41 チキンカツ</span><span class="tag time">⏱ 約22分</span></div>
+  </div>
+</a>
+<a href="/recipe-34.html" class="recipe-card"
+  data-cat="揚げ物（油なし）"
+  data-title="えびフライ"
+  data-method="過熱水蒸気・グリル 42えびフライ">
+  <div class="card-thumb">🍤</div>
+  <div class="card-body">
+    <div class="card-cat">揚げ物（油なし）</div>
+    <div class="card-title">えびフライ</div>
+    <div class="card-subtitle">油なし</div>
+    <div class="card-meta"><span class="tag menu">No.42 えびフライ</span><span class="tag time">⏱ 約22分</span></div>
+  </div>
+</a>
+<a href="/recipe-35.html" class="recipe-card"
+  data-cat="煮物"
+  data-title="肉じゃが"
+  data-method="レンジ・飲み物デイリー 9肉じゃが">
+  <div class="card-thumb">🍲</div>
+  <div class="card-body">
+    <div class="card-cat">煮物</div>
+    <div class="card-title">肉じゃが</div>
+    
+    <div class="card-meta"><span class="tag menu">No.9 肉じゃが</span><span class="tag time">⏱ 約60分</span></div>
+  </div>
+</a>
+<a href="/recipe-36.html" class="recipe-card"
+  data-cat="煮物"
+  data-title="ポークカレー"
+  data-method="レンジ・飲み物デイリー 9肉じゃが（仕上がり調節弱）">
+  <div class="card-thumb">🍲</div>
+  <div class="card-body">
+    <div class="card-cat">煮物</div>
+    <div class="card-title">ポークカレー</div>
+    
+    <div class="card-meta"><span class="tag menu">No.9 肉じゃが</span><span class="tag time">⏱ 約40分（下ごしらえ レンジ600W 4</span></div>
+  </div>
+</a>
+<a href="/recipe-37.html" class="recipe-card"
+  data-cat="煮物"
+  data-title="大根といかの煮付け"
+  data-method="レンジ・飲み物デイリー 9肉じゃが（仕上がり調節やや弱）">
+  <div class="card-thumb">🍲</div>
+  <div class="card-body">
+    <div class="card-cat">煮物</div>
+    <div class="card-title">大根といかの煮付け</div>
+    
+    <div class="card-meta"><span class="tag menu">No.9 肉じゃが</span><span class="tag time">⏱ 約55分（下ごしらえ 7根菜 仕上がり調</span></div>
+  </div>
+</a>
+<a href="/recipe-38.html" class="recipe-card"
+  data-cat="煮物"
+  data-title="里いもの含め煮"
+  data-method="レンジ・飲み物デイリー 9肉じゃが（仕上がり調節やや弱）">
+  <div class="card-thumb">🍲</div>
+  <div class="card-body">
+    <div class="card-cat">煮物</div>
+    <div class="card-title">里いもの含め煮</div>
+    
+    <div class="card-meta"><span class="tag menu">No.9 肉じゃが</span><span class="tag time">⏱ 約55分</span></div>
+  </div>
+</a>
+<a href="/recipe-39.html" class="recipe-card"
+  data-cat="煮物"
+  data-title="かぼちゃの含め煮"
+  data-method="レンジ・飲み物デイリー 9肉じゃが（仕上がり調節やや弱）">
+  <div class="card-thumb">🍲</div>
+  <div class="card-body">
+    <div class="card-cat">煮物</div>
+    <div class="card-title">かぼちゃの含め煮</div>
+    
+    <div class="card-meta"><span class="tag menu">No.9 肉じゃが</span><span class="tag time">⏱ 約55分</span></div>
+  </div>
+</a>
+<a href="/recipe-40.html" class="recipe-card"
+  data-cat="煮物"
+  data-title="切り干し大根の煮物"
+  data-method="レンジ・飲み物デイリー 9肉じゃが（仕上がり調節弱）">
+  <div class="card-thumb">🍲</div>
+  <div class="card-body">
+    <div class="card-cat">煮物</div>
+    <div class="card-title">切り干し大根の煮物</div>
+    
+    <div class="card-meta"><span class="tag menu">No.9 肉じゃが</span><span class="tag time">⏱ 約40分</span></div>
+  </div>
+</a>
+<a href="/recipe-41.html" class="recipe-card"
+  data-cat="ピザ・グラタン"
+  data-title="ピザ"
+  data-method="オーブン・飲み物デイリー 13ピザ（予熱あり）">
+  <div class="card-thumb">🍕</div>
+  <div class="card-body">
+    <div class="card-cat">ピザ・グラタン</div>
+    <div class="card-title">ピザ</div>
+    <div class="card-subtitle">手作りピザ生地</div>
+    <div class="card-meta"><span class="tag menu">No.13 ピザ</span><span class="tag time">⏱ 予熱あり</span></div>
+  </div>
+</a>
+<a href="/recipe-42.html" class="recipe-card"
+  data-cat="自家製食品"
+  data-title="手作りソーセージ"
+  data-method="スチーム調理 32自家製食品（仕上がり調節やや弱）">
+  <div class="card-thumb">🥩</div>
+  <div class="card-body">
+    <div class="card-cat">自家製食品</div>
+    <div class="card-title">手作りソーセージ</div>
+    
+    <div class="card-meta"><span class="tag menu">No.32 自家製食品</span><span class="tag time">⏱ 仕上がり調節やや弱で約60分</span></div>
+  </div>
+</a>
+<a href="/recipe-43.html" class="recipe-card"
+  data-cat="自家製食品"
+  data-title="ベーコンと玉ねぎのキッシュ"
+  data-method="オーブン（予熱なし）210℃">
+  <div class="card-thumb">🥩</div>
+  <div class="card-body">
+    <div class="card-cat">自家製食品</div>
+    <div class="card-title">ベーコンと玉ねぎのキッシュ</div>
+    
+    <div class="card-meta"><span class="tag time">⏱ 25〜30分</span></div>
+  </div>
+</a>
+<a href="/recipe-44.html" class="recipe-card"
+  data-cat="パン"
+  data-title="バターロール（ロールパン）"
+  data-method="スチームオーブン発酵40℃ + オーブン（予熱あり）170℃">
+  <div class="card-thumb">🍞</div>
+  <div class="card-body">
+    <div class="card-cat">パン</div>
+    <div class="card-title">バターロール（ロールパン）</div>
+    
+    <div class="card-meta"><span class="tag time">⏱ 予熱あり 16〜22分（発酵 一次：50</span></div>
+  </div>
+</a>
+<a href="/recipe-45.html" class="recipe-card"
+  data-cat="スイーツ"
+  data-title="アップルパイ"
+  data-method="オーブン（予熱あり）190℃">
+  <div class="card-thumb">🍰</div>
+  <div class="card-body">
+    <div class="card-cat">スイーツ</div>
+    <div class="card-title">アップルパイ</div>
+    
+    <div class="card-meta"><span class="tag time">⏱ 予熱あり 36〜42分</span></div>
+  </div>
+</a>
+  </div>
+  <div class="no-results" id="noResults" style="display:none">
+    <div class="icon">🔍</div>
+    <p>該当するレシピが見つかりませんでした</p>
+  </div>
+</main>
+<footer>日立過熱水蒸気オーブンレンジ MRO-MS7 クッキングガイド (2013年版) をもとに生成</footer>
+<script>
+(function(){
+  const grid = document.getElementById('recipeGrid');
+  const cards = Array.from(grid.querySelectorAll('.recipe-card'));
+  const input = document.getElementById('searchInput');
+  const catSelect = document.getElementById('catSelect');
+  const catBtns = document.querySelectorAll('.cat-btn');
+  const count = document.getElementById('resultCount');
+  const noRes = document.getElementById('noResults');
+  let activeCat = '';
+
+  function filter() {
+    const q = input.value.trim().toLowerCase();
+    let visible = 0;
+    cards.forEach(card => {
+      const catMatch = !activeCat || card.dataset.cat === activeCat;
+      const textMatch = !q ||
+        card.dataset.title.toLowerCase().includes(q) ||
+        card.dataset.method.toLowerCase().includes(q);
+      const show = catMatch && textMatch;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    count.textContent = visible + '件のレシピ';
+    noRes.style.display = visible === 0 ? '' : 'none';
+    grid.style.display = visible === 0 ? 'none' : '';
+  }
+
+  input.addEventListener('input', filter);
+  catSelect.addEventListener('change', function() {
+    activeCat = this.value;
+    catBtns.forEach(b => b.classList.toggle('active', b.dataset.cat === activeCat));
+    filter();
+  });
+  catBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      activeCat = this.dataset.cat;
+      catSelect.value = activeCat;
+      catBtns.forEach(b => b.classList.toggle('active', b === this));
+      filter();
+    });
+  });
+})();
+</script>
+</body></html>
